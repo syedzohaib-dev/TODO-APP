@@ -1,0 +1,246 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: rgb(24, 48, 3);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Form styles */
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-input{
+    width: 80%;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    background: white;
+    border-radius: 2rem;
+}
+
+form button {
+    color: rgb(255, 255, 255);
+    background: rgb(80, 136, 7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+}
+
+/* Todo container styles */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 90%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+/* Button styles */
+.trash-btn {
+    color: rgb(14, 2, 2);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn,
+.edit-btn {
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn {
+    background: rgb(169, 169, 169);
+}
+
+.edit-btn {
+    background: rgb(99, 99, 99) !important;
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.edit-btn {
+    background-color: transparent;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Select styles */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color: rgb(17, 17, 16);
+    font-size: 0.5cm;
+    width: 10rem;
+    height: 3.05rem;
+    cursor: pointer;
+    padding: 1rem;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: white;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: rgb(169, 169, 169);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: rgb(23, 1, 89);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .select {
+        max-width: 100%;
+        /* Adjust maximum width for smaller screens */
+        padding: 0;
+        /* Remove padding for smaller screens */
+    }
+}
+
+/* Edit modal styles */
+.modal-content {
+    background-color: rgb(255, 255, 255);
+    color: rgb(35, 59, 2);
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header,
+.modal-footer {
+    /* background-color: rgb(3, 12, 99); */
+    color: rgb(55, 77, 5);
+}
+
+.modal-header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.form-control {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(21, 49, 2) !important;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Add this to your CSS */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: rgb(78, 122, 7);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    /* Add margin to create spacing between buttons */
+}
+
+.btn-secondary {
+    background-color: rgb(122, 2, 28);
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    /* Add margin to create spacing between buttons */
+}
