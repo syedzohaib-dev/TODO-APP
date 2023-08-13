@@ -101,18 +101,6 @@ const TodoList = () => {
         <button className="todo-button" type="submit">
           <BsHandThumbsUpFill className="icon" />
         </button>
-        <div className="select">
-          <select
-            name="todos"
-            className="filter-todo"
-            value={filterOption}
-            onChange={(e) => filterTodos(e.target.value)}
-          >
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="incomplete">Incomplete</option>
-          </select>
-        </div>
       </form>
 
       <div className="todo-container">
